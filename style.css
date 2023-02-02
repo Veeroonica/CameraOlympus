@@ -1,0 +1,177 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.4rem;
+	color: hsl(228, 12%, 48%);
+}
+
+.header {
+	width: 100vw;
+	height: 100vh;
+}
+
+.header__img {
+	position: relative;
+	width: 100%;
+	height: 30%;
+	background-image: url('img/camera-gab506c69e_640.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.header__img::before {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	content: '';
+	z-index: 10;
+}
+.main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 1.2em;
+}
+.main__text-desktop {
+	display: none;
+}
+.main__subtitle {
+	margin-top: 5em;
+	font-size: 1rem;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+}
+.main__title {
+	margin: 0.5em 0;
+	font-size: 2.8rem;
+	color: hsl(212, 21%, 14%);
+}
+.main__text {
+	font-size: 1.1rem;
+	line-height: 17px;
+}
+.main__price {
+	display: flex;
+	align-items: center;
+	margin: 2em 0;
+}
+.main__price-correct {
+	margin-right: 1em;
+	font-size: 2.2rem;
+	color: rgb(10, 71, 124);
+}
+.main__price-old {
+	font-size: 1rem;
+}
+.main__btn {
+	padding: 1em;
+	color: hsl(0, 0%, 100%);
+	background-color: #222;
+	border: none;
+	border-radius: 10px;
+	box-shadow: 0 0 15px rgb(10, 71, 124);
+	transition: background-color 0.3s cubic-bezier(0.24, -0.04, 0.9, 0.75);
+	cursor: pointer;
+}
+.main__btn:hover {
+	background-color: hsl(212, 21%, 14%);
+}
+
+.square {
+	display: none;
+	position: absolute;
+	top: 19em;
+	right: 10%;
+	width: 15%;
+	opacity: 0.05;
+	animation: rotate 45s infinite;
+}
+
+/* ANIMATIONS */
+
+@keyframes rotate {
+	from {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@media (min-width: 375px) {
+	.square {
+		display: block;
+	}
+	.main__subtitle {
+		margin-top: 9em;
+	}
+}
+@media (min-width: 576px) {
+	.main__text-desktop {
+		display: inline;
+	}
+}
+
+@media (min-width: 768px) {
+	.header {
+		display: flex;
+	}
+	.header__img {
+		background-image: url('./img/camera-g027cdb7ec_1920.jpg');
+		width: 50%;
+		height: 100%;
+	}
+	.main {
+		display: flex;
+		flex-direction: column;
+		width: 50%;
+		height: 100%;
+	}
+	.main__subtitle {
+		margin-top: 3.5em;
+	}
+	.main__btn {
+		font-size: 1.7rem;
+	}
+	.square {
+		top: 2em;
+		right: 5%;
+		width: 8%;
+	}
+}
+
+@media (min-width: 992px) {
+	.main {
+		padding: 1.7em;
+	}
+	.main__subtitle {
+		font-size: 1.4rem;
+		letter-spacing: 10px;
+	}
+	.main__title {
+		font-size: 4rem;
+	}
+	.main__text {
+		font-size: 1.3rem;
+		line-height: 20px;
+	}
+	.main__price-correct {
+		font-size: 3rem;
+	}
+	.main__price-old {
+		font-size: 1.3rem;
+	}
+	.main__btn {
+		padding: 1.5em;
+	}
+}
