@@ -47,7 +47,7 @@ body {
 }
 .main__subtitle {
 	margin-top: 5em;
-	font-size: 1rem;
+	font-size: 1.2rem;
 	text-transform: uppercase;
 	letter-spacing: 5px;
 }
@@ -57,7 +57,7 @@ body {
 	color: hsl(212, 21%, 14%);
 }
 .main__text {
-	font-size: 1.1rem;
+	font-size: 1.2rem;
 	line-height: 17px;
 }
 .main__price {
@@ -71,7 +71,7 @@ body {
 	color: rgb(10, 71, 124);
 }
 .main__price-old {
-	font-size: 1rem;
+	font-size: 1.2rem;
 }
 .main__btn {
 	padding: 1em;
